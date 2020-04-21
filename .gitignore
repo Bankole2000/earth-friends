@@ -8,6 +8,9 @@ firebase.json
 firestore.indexes.json
 firestore.rules
 functions
+assets
+fonts
+css
 # local env files
 .env.local
 .env.*.local
