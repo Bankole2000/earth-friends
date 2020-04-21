@@ -15,11 +15,14 @@
         </form>
       </div>
     </div>
+    <div class="hide-on-small-only space"></div>
+    <Footer />
   </div>
 </template>
 
 <script>
 import db from '@/firebase/init';
+import Footer from '../layouts/Footer.vue';
 
 export default {
   name: 'Profile',
@@ -29,6 +32,9 @@ export default {
       newComment: null,
       feedback: null,
     };
+  },
+  components: {
+    Footer,
   },
   created() {
     const ref = db.collection('users');
@@ -41,5 +47,13 @@ export default {
 </script>
 
 <style>
+  .space {
+    height: 120px;
+  }
 
+  @media screen and (min-width: 600px) {
+    .space {
+      height: 260px;
+    }
+  }
 </style>

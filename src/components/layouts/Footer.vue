@@ -40,8 +40,8 @@
     <div class="container">
     <strong>© {{ year }} <a href="https://bankole2000.github.io/portfolio" class="white-text">
     Bankole Esan</a></strong>
-    <a class="grey-text text-lighten-4 right" href="https://github.com/Bankole2000/vue-smoothies">
-      <span class="mdi mdi-github-circle mdi-12px"></span> View on Github</a>
+    <a class="grey-text text-lighten-4 right" href="https://github.com/Bankole2000/earth-friends">
+      <span class="mdi mdi-github mdi-12px"></span> View on Github</a>
     </div>
   </div>
 </footer>
