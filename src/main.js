@@ -4,6 +4,8 @@ import App from './App.vue';
 import router from './router';
 import 'materialize-css/dist/css/materialize.min.css';
 
+Vue.use(require('vue-moment'));
+
 Vue.config.productionTip = false;
 
 let app = null;
