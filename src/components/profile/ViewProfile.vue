@@ -4,7 +4,7 @@
       <div v-if="profile" class="card">
         <h2 class="deep-purple-text center">{{ profile.alias }}'s Wall</h2>
         <ul class="comments collection">
-          <li v-for="(comment, index) in comments" :key="index"><div class="deep-purple-text">
+          <li v-for="(comment, index) in orderedChat" :key="index"><div class="deep-purple-text">
             {{ comment.from }}
             <span class="grey-text text-darken-2">
               {{ comment.time | moment('from', 'now') }}</span></div>
@@ -61,6 +61,12 @@ export default {
       } else {
         this.feedback = 'Please enter a comment to add';
       }
+    },
+  },
+  computed: {
+    orderedChat() {
+      const chat = this.comments;
+      return chat.sort((a, b) => ((a.time < b.time) ? 1 : -1));
     },
   },
   created() {
